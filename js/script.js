@@ -1,39 +1,23 @@
-
 let firstName = null;
 do {
 	firstName = prompt('Укажите Ваше имя', 'Глеб');
 } while (isFinite(firstName) || firstName === '')
 
+let lastName = null;
+do {
+	lastName = prompt('Укажите Вашу фамилию', 'Смык');
+} while (isFinite(lastName) || lastName === '')
 
-let lastName = prompt('Укажите Вашу фамилию', 'Смык');
+let fatherName = null;
+do {
+	fatherName = prompt('Укажите Ваше отчество', 'Иванович');
+} while (isFinite(fatherName) || fatherName === '')
 
-for (let i = 0; i < Infinity; i++) {
-	if (isFinite(lastName) === false && lastName !== '') {
-		break;
-	} else {
-		lastName = prompt('Укажите фамилию корректно', 'Смык');
-	}
-}
+let age = null;
+do {
+	age = prompt('Укажите Ваш возраст, лет', 26);
+} while (isFinite(age) === false || age === '' || age < 0 || age >= 100)
 
-let fatherName = prompt('Укажите Ваше отчество', 'Иванович');
-
-for (let i = 0; i < Infinity; i++) {
-	if (isFinite(fatherName) === false && fatherName !== '') {
-		break;
-	} else {
-		fatherName = prompt('Укажите отчество корректно', 'Смык');
-	}
-}
-
-let age = prompt('Укажите Ваш возраст, лет', 26);
-
-for (let i = 0; i < Infinity; i++) {
-	if (isFinite(age) && age <= 100 && age > 0) {
-		break;
-	} else {
-		age = prompt('Укажите возраст корректно', 26);
-	}
-}
 
 let sex = confirm('Ваш пол мужской?');
 let ageDay = age * 365;
